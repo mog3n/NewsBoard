@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One|Libre+Barcode+39+Text');
+
+body {
+  font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #000;
+}
+h1 {
+  font-size: 2.5em
+}
+
+h2 {
+  font-size: 2em
+}
+
+h3 {
+  font-size: 1.5em
+}
+
+a {
+  text-decoration: none;
+  color: #09f;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.header{
+  padding: 10px;
+  font-weight: 500;
+  font-family: 'Libre Barcode 39 Text';
+  font-size: 5em;
+  color: #09f;
+
+  text-align: center;
+}
+
+input{
+  border: none;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search{
+  font-family: 'Helvetica Neue';
+  font-weight: 900;
+  font-size: 2.5em;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #09f;
+  width: 100%;
+
+  background-color: #09f;
+  color: #fff;
+}
+
+.article{
+  padding: 20px;
+  min-height: 150px;
+  background-color: #fff;
+
+  border-style: solid;
+
+  border-left: none;
+  border-top: none;
+  border-width: 1pt;
+  border-color: #09f;
+}
