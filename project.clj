@@ -1,6 +1,6 @@
 (defproject news-boi "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "News Boi"
+  :url "https://salty-fortress-89574.herokuapp.com/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -10,6 +10,7 @@
                   [cljs-ajax "0.6.0"]
                   [clj-time "0.15.0"]
                 ]
+
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.18"]]
@@ -46,7 +47,9 @@
                          :output-dir "public/js/release"
                          :optimizations :advanced
                          :infer-externs true
-                         :pretty-print false}}}}
+                         :pretty-print false}}}
+
+                }
 
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
@@ -54,4 +57,17 @@
                    :dependencies [[binaryage/devtools "0.9.10"]
                                   [figwheel-sidecar "0.5.18"]
                                   [nrepl "0.6.0"]
-                                  [cider/piggieback "0.4.0"]]}})
+                                  [cider/piggieback "0.4.0"]]}
+            
+            :uberjar {:source-paths ["env/prod/clj"]
+              :hooks [leiningen.cljsbuild]
+              :env {:production true}
+              :omit-source true
+              :optimizations :none
+              :aot :all
+              :main news-boi.core
+              :cljsbuild {:builds {:app
+                         {:source-paths ["env/prod/cljs"]
+                          :compiler {:optimizations :advanced
+                                     :pretty-print false}}}}}
+            })

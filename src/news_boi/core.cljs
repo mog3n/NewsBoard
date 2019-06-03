@@ -13,7 +13,7 @@
   [:div
 
     [:div
-        [:h1 {:class "header"} "NEWIT"]
+        [:h1 {:class "header"} "NEWS BOI"]
         [ui/search-bar]
     ]
 

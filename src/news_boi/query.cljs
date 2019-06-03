@@ -35,6 +35,7 @@
 			}
 		)
 	)
+
 	;; query r/[keyword] for top this week
 	(let [query-url (str "https://www.reddit.com/r/" keyword "/top.json?t=week&limit=50")]
 		(ajax/GET query-url
